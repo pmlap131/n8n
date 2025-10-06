@@ -49,17 +49,23 @@ onMounted(() => {
 	logoEl.querySelector('path')?.setAttribute('fill', logoColor);
 
 	// Reuse the SVG as favicon
-	const blob = new Blob([logoEl.outerHTML], { type: 'image/svg+xml' });
-	useFavicon(URL.createObjectURL(blob));
+	// const blob = new Blob([logoEl.outerHTML], { type: 'image/svg+xml' });
+	// useFavicon(URL.createObjectURL(blob));
 });
 </script>
 
+<!--
 <template>
 	<div :class="containerClasses" data-test-id="n8n-logo">
 		<LogoIcon ref="logo" :class="$style.logo" />
 		<LogoText v-if="showLogoText" :class="$style.logoText" />
 		<slot />
 	</div>
+</template>
+-->
+
+<template>
+  <span></span>
 </template>
 
 <style lang="scss" module>
