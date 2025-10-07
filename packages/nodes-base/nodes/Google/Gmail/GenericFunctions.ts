@@ -432,6 +432,7 @@ export function prepareEmailBody(
 	const emailType = this.getNodeParameter('emailType', itemIndex) as string;
 	let message = (this.getNodeParameter('message', itemIndex, '') as string).trim();
   void instanceId;
+  void appendAttribution;
 // 	if (appendAttribution) {
 // 		const attributionText = 'This email was sent automatically with ';
 // 		const link = createUtmCampaignLink('n8n-nodes-base.gmail', instanceId);
