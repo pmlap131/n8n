@@ -11,7 +11,7 @@ import type {
 import { NodeApiError } from 'n8n-workflow';
 
 import { getSendAndWaitConfig } from '../../utils/sendAndWait/utils';
-import { createUtmCampaignLink } from '../../utils/utilities';
+// import { createUtmCampaignLink } from '../../utils/utilities';
 
 // Interface in n8n
 export interface IMarkupKeyboard {
@@ -97,7 +97,7 @@ export function addAdditionalFields(
 		if (!containsUrl) {
 			body.disable_web_page_preview = true;
 		}
-
+		void instanceId;
 // 		if (additionalFields.appendAttribution) {
 // 			if (additionalFields.parse_mode === 'Markdown') {
 // 				body.text = `${body.text}\n\n_${attributionText}_[n8n](${link})`;
