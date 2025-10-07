@@ -80,7 +80,7 @@ export function addAdditionalFields(
 	const additionalFields = this.getNodeParameter('additionalFields', index);
 
 	if (operation === 'sendMessage') {
-		const attributionText = 'This message was sent automatically with ';
+// 		const attributionText = 'This message was sent automatically with ';
 		const link = createUtmCampaignLink('n8n-nodes-base.telegram', instanceId);
 
 		if (nodeVersion && nodeVersion >= 1.1 && additionalFields.appendAttribution === undefined) {
@@ -98,13 +98,13 @@ export function addAdditionalFields(
 			body.disable_web_page_preview = true;
 		}
 
-		if (additionalFields.appendAttribution) {
-			if (additionalFields.parse_mode === 'Markdown') {
-				body.text = `${body.text}\n\n_${attributionText}_[n8n](${link})`;
-			} else if (additionalFields.parse_mode === 'HTML') {
-				body.text = `${body.text}\n\n<em>${attributionText}</em><a href="${link}" target="_blank">n8n</a>`;
-			}
-		}
+// 		if (additionalFields.appendAttribution) {
+// 			if (additionalFields.parse_mode === 'Markdown') {
+// 				body.text = `${body.text}\n\n_${attributionText}_[n8n](${link})`;
+// 			} else if (additionalFields.parse_mode === 'HTML') {
+// 				body.text = `${body.text}\n\n<em>${attributionText}</em><a href="${link}" target="_blank">n8n</a>`;
+// 			}
+// 		}
 
 		if (
 			nodeVersion &&
@@ -260,12 +260,12 @@ export function createSendAndWaitMessageBody(context: IExecuteFunctions) {
 	const config = getSendAndWaitConfig(context);
 	let text = config.message;
 
-	if (config.appendAttribution !== false) {
-		const instanceId = context.getInstanceId();
-		const attributionText = 'This message was sent automatically with ';
-		const link = createUtmCampaignLink('n8n-nodes-base.telegram', instanceId);
-		text = `${text}\n\n_${attributionText}_[n8n](${link})`;
-	}
+// 	if (config.appendAttribution !== false) {
+// 		const instanceId = context.getInstanceId();
+// 		const attributionText = 'This message was sent automatically with ';
+// 		const link = createUtmCampaignLink('n8n-nodes-base.telegram', instanceId);
+// 		text = `${text}\n\n_${attributionText}_[n8n](${link})`;
+// 	}
 
 	const body = {
 		chat_id,

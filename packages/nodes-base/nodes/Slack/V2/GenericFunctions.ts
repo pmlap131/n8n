@@ -324,18 +324,18 @@ export function createSendAndWaitMessageBody(context: IExecuteFunctions) {
 		],
 	};
 
-	if (config.appendAttribution) {
-		const instanceId = context.getInstanceId();
-		const attributionText = 'This message was sent automatically with ';
-		const link = createUtmCampaignLink('n8n-nodes-base.slack', instanceId);
-		body.blocks.push({
-			type: 'section',
-			text: {
-				type: 'mrkdwn',
-				text: `${attributionText} _<${link}|n8n>_`,
-			},
-		});
-	}
+// 	if (config.appendAttribution) {
+// 		const instanceId = context.getInstanceId();
+// 		const attributionText = 'This message was sent automatically with ';
+// 		const link = createUtmCampaignLink('n8n-nodes-base.slack', instanceId);
+// 		body.blocks.push({
+// 			type: 'section',
+// 			text: {
+// 				type: 'mrkdwn',
+// 				text: `${attributionText} _<${link}|n8n>_`,
+// 			},
+// 		});
+// 	}
 
 	if (context.getNode().typeVersion > 2.2 && body.blocks?.[1]?.type === 'section') {
 		delete body.blocks[1].text.emoji;

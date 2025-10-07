@@ -168,13 +168,13 @@ export function createSendAndWaitMessageBody(context: IExecuteFunctions) {
 
 	let text = `${config.message}\n\n\n${buttons.join('   ')}`;
 
-	if (config.appendAttribution !== false) {
-		const instanceId = context.getInstanceId();
-		const attributionText = '_This_ _message_ _was_ _sent_ _automatically_ _with_';
-		const link = createUtmCampaignLink('n8n-nodes-base.googleChat', instanceId);
-		const attribution = `${attributionText} _<${link}|n8n>_`;
-		text += `\n\n${attribution}`;
-	}
+// 	if (config.appendAttribution !== false) {
+// 		const instanceId = context.getInstanceId();
+// 		const attributionText = '_This_ _message_ _was_ _sent_ _automatically_ _with_';
+// 		const link = createUtmCampaignLink('n8n-nodes-base.googleChat', instanceId);
+// 		const attribution = `${attributionText} _<${link}|n8n>_`;
+// 		text += `\n\n${attribution}`;
+// 	}
 
 	const body = {
 		text,
