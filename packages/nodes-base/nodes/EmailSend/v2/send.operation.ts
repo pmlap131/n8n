@@ -7,7 +7,7 @@ import type {
 } from 'n8n-workflow';
 import { NodeApiError } from 'n8n-workflow';
 
-// import { createUtmCampaignLink, updateDisplayOptions } from '@utils/utilities';
+import {  updateDisplayOptions } from '@utils/utilities';
 
 import { fromEmailProperty, toEmailProperty } from './descriptions';
 import { configureTransport, type EmailSendOptions } from './utils';
@@ -215,7 +215,7 @@ export async function execute(this: IExecuteFunctions): Promise<INodeExecutionDa
 			if (appendAttribution === undefined) {
 				appendAttribution = nodeVersion >= 2.1;
 			}
-
+      void instanceId;
 // 			if (appendAttribution) {
 // 				const attributionText = 'This email was sent automatically with ';
 // 				const link = createUtmCampaignLink('n8n-nodes-base.emailSend', instanceId);
