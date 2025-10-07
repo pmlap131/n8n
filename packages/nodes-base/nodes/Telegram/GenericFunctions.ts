@@ -81,7 +81,7 @@ export function addAdditionalFields(
 
 	if (operation === 'sendMessage') {
 // 		const attributionText = 'This message was sent automatically with ';
-		const link = createUtmCampaignLink('n8n-nodes-base.telegram', instanceId);
+// 		const link = createUtmCampaignLink('n8n-nodes-base.telegram', instanceId);
 
 		if (nodeVersion && nodeVersion >= 1.1 && additionalFields.appendAttribution === undefined) {
 			additionalFields.appendAttribution = true;

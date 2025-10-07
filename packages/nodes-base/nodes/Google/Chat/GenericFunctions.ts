@@ -10,7 +10,7 @@ import type {
 import { NodeApiError } from 'n8n-workflow';
 
 import { getSendAndWaitConfig } from '../../../utils/sendAndWait/utils';
-import { createUtmCampaignLink } from '../../../utils/utilities';
+// import { createUtmCampaignLink } from '../../../utils/utilities';
 import { getGoogleAccessToken } from '../GenericFunctions';
 
 async function googleServiceAccountApiRequest(

@@ -11,7 +11,7 @@ import type {
 import { jsonParse, NodeApiError, NodeOperationError } from 'n8n-workflow';
 
 import { getSendAndWaitConfig } from '../../../../utils/sendAndWait/utils';
-import { capitalize, createUtmCampaignLink } from '../../../../utils/utilities';
+import { capitalize } from '../../../../utils/utilities';
 import { discordApiMultiPartRequest, discordApiRequest } from '../transport';
 
 export const createSimplifyFunction =

@@ -4,7 +4,7 @@ import {
 	getSendAndWaitConfig,
 	getSendAndWaitProperties,
 } from '../../../../../../utils/sendAndWait/utils';
-import { createUtmCampaignLink } from '../../../../../../utils/utilities';
+// import { createUtmCampaignLink } from '../../../../../../utils/utilities';
 import { chatRLC } from '../../descriptions';
 import { microsoftApiRequest } from '../../transport';
 
@@ -26,7 +26,7 @@ export async function execute(this: IExecuteFunctions, i: number, instanceId: st
 	const buttons = config.options.map((option) => `<a href="${option.url}">${option.label}</a>`);
 
 	let content = `${config.message}<br><br>${buttons.join(' ')}`;
-
+  void instanceId;
 // 	if (config.appendAttribution !== false) {
 // 		const attributionText = 'This message was sent automatically with';
 // 		const link = createUtmCampaignLink('n8n-nodes-base.microsoftTeams', instanceId);
