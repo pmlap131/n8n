@@ -49,8 +49,8 @@ export function createEmailBodyWithN8nAttribution(
 	buttons: string,
 	instanceId?: string,
 ) {
-	const utm_campaign = instanceId ? `&utm_campaign=${instanceId}` : '';
-	const n8nWebsiteLink = `https://n8n.io/?utm_source=n8n-internal&utm_medium=send-and-wait${utm_campaign}`;
+	// const utm_campaign = instanceId ? `&utm_campaign=${instanceId}` : '';
+	// const n8nWebsiteLink = `https://n8n.io/?utm_source=n8n-internal&utm_medium=send-and-wait${utm_campaign}`;
 	return `
 <!DOCTYPE html>
 <html lang='en'>
